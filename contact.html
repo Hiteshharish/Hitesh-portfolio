@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Hitesh, UX / Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Hitesh.</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="projects.html" class="nav-link">Work</a>
+      <a href="contact.html" class="nav-link nav-link--active">Contact</a>
+      <a href="#" class="nav-link nav-link--resume">Résumé ↗</a>
+    </div>
+  </nav>
+
+  <!-- CONTACT HERO -->
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <div class="page-header-meta">
+          <span class="label label--muted">Get in touch</span>
+          <div class="availability-badge">
+            <span class="dot dot--green"></span>
+            <span class="label label--muted">Available for opportunities</span>
+          </div>
+        </div>
+        <h1 class="page-headline">
+          Let's work<br/><em>together.</em>
+        </h1>
+        <p class="page-subheadline">
+          I'm open to full-time roles and contract engagements. Whether you have a project in mind or just want to connect — I'd love to hear from you.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTACT BODY -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-inner">
+
+        <!-- LEFT: Info -->
+        <div class="contact-info">
+          <div class="contact-detail-block">
+            <span class="contact-detail-label">Email</span>
+            <a href="mailto:hitesh@example.com" class="contact-detail-value contact-link">
+              hitesh@example.com
+            </a>
+          </div>
+          <div class="contact-detail-block">
+            <span class="contact-detail-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/hitesh" target="_blank" rel="noopener" class="contact-detail-value contact-link">
+              linkedin.com/in/hitesh ↗
+            </a>
+          </div>
+          <div class="contact-detail-block">
+            <span class="contact-detail-label">Based in</span>
+            <span class="contact-detail-value">Bengaluru, India</span>
+          </div>
+          <div class="contact-detail-block">
+            <span class="contact-detail-label">Timezone</span>
+            <span class="contact-detail-value">IST (UTC+5:30) · Flexible</span>
+          </div>
+          <div class="rule"></div>
+          <div class="availability-info">
+            <h3 class="availability-heading">Currently available for</h3>
+            <ul class="availability-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Full-time roles
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Contract &amp; freelance
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Advisory &amp; consulting
+              </li>
+            </ul>
+          </div>
+          <div class="contact-elsewhere">
+            <h3 class="availability-heading">Find me elsewhere</h3>
+            <div class="elsewhere-links">
+              <a href="https://linkedin.com/in/hitesh" target="_blank" rel="noopener" class="elsewhere-link">LinkedIn ↗</a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener" class="elsewhere-link">Dribbble ↗</a>
+              <a href="https://figma.com/@hitesh" target="_blank" rel="noopener" class="elsewhere-link">Figma ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">Your name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                autocomplete="name"
+                required
+              />
+              <span class="form-error" id="name-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email address</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@company.com"
+                autocomplete="email"
+                required
+              />
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input
+                class="form-input"
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Let's collaborate on..."
+                required
+              />
+              <span class="form-error" id="subject-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                class="form-input form-textarea"
+                id="message"
+                name="message"
+                placeholder="Tell me about your project, timeline, and what you're hoping to achieve..."
+                rows="6"
+                required
+              ></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                Send message →
+              </button>
+              <p class="form-note">I typically respond within 1–2 business days.</p>
+            </div>
+            <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p>Message sent — thank you! I'll be in touch soon.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Hitesh.</a>
+          <p class="footer-tagline">Senior UX / Product Designer<br/>Bengaluru, India</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/hitesh" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://figma.com" target="_blank" rel="noopener">Figma ↗</a>
+          <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble ↗</a>
+        </div>
+        <p class="footer-copy">© 2025 Hitesh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
