@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hitesh — UX / Product Designer</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -62,7 +59,7 @@
         <!-- Profile Card -->
         <div class="profile-card">
           <div class="profile-image">
-            <img src="./assets/profile.jpeg" alt="Hitesh" />
+            <img src="./assets/profile.jpeg" alt="Hitesh – Senior Product Designer" />
           </div>
 
           <div class="profile-text">
@@ -127,8 +124,117 @@
       </div>
     </div>
 
-    <!-- You can keep your existing project rows/cards here exactly as before -->
-    <!-- (Your earlier Selected Work markup already matches the CSS correctly) -->
+    <!-- Project 01 -->
+    <article class="project-row project-row--featured" data-index="01">
+      <div class="container">
+        <div class="project-row-inner">
+
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <div class="project-tags">
+              <span class="tag">Enterprise</span>
+              <span class="tag">App Modernization</span>
+              <span class="tag">2025</span>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h2 class="project-title">Horizon Client</h2>
+            <p class="project-client">Omnissa</p>
+            <p class="project-desc">
+              A cross-platform enterprise client enabling secure access to virtual desktops
+              from any device. Led design system modernization across 6 platforms with WCAG AA compliance.
+            </p>
+
+            <div class="project-impact">
+              <div class="impact-item">
+                <strong>30–40%</strong>
+                <span>Faster task completion</span>
+              </div>
+              <div class="impact-item">
+                <strong>+15%</strong>
+                <span>Usability score improvement</span>
+              </div>
+              <div class="impact-item">
+                <strong>WCAG AA</strong>
+                <span>Accessibility compliance</span>
+              </div>
+            </div>
+
+            <a href="projects.html" class="project-link">
+              View project <span>→</span>
+            </a>
+          </div>
+
+          <div class="project-visual project-visual--horizon"></div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 02 -->
+    <article class="project-row" data-index="02">
+      <div class="container">
+        <div class="project-row-inner project-row-inner--reverse">
+
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <div class="project-tags">
+              <span class="tag">Civic Tech</span>
+              <span class="tag">Government</span>
+              <span class="tag">2022</span>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h2 class="project-title">Colorado Peak</h2>
+            <p class="project-client">Deloitte — Internal Pitch</p>
+            <p class="project-desc">
+              Reimagining access to state services through a human‑centered, accessible system
+              connecting healthcare, employment, and benefits.
+            </p>
+
+            <a href="projects.html" class="project-link">
+              View project <span>→</span>
+            </a>
+          </div>
+
+          <div class="project-visual project-visual--colorado"></div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- Project Grid -->
+    <div class="container">
+      <div class="project-grid">
+
+        <article class="project-card project-card--bewell" data-index="03">
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Bewell</h2>
+            <p class="project-card-client">Personal — Concept</p>
+            <p class="project-card-desc">
+              An AI‑powered wellness dashboard unifying fragmented health data into
+              clear, actionable insights.
+            </p>
+            <a href="projects.html" class="project-link">View project →</a>
+          </div>
+        </article>
+
+        <article class="project-card project-card--bloom" data-index="04">
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Bloom</h2>
+            <p class="project-card-client">Deloitte — Internal Pitch</p>
+            <p class="project-card-desc">
+              Improving emergency triage workflows with real‑time status visibility
+              and clinician‑friendly defaults.
+            </p>
+            <a href="projects.html" class="project-link">View project →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
   </section>
 
   <!-- ABOUT -->
@@ -140,20 +246,19 @@
           <span class="section-num">02</span>
           <span class="section-label">About</span>
           <h2 class="about-headline">
-            Thoughtful design rooted in research, systems thinking, and accessibility.
+            Thoughtful design rooted in research, systems thinking, & accessibility.
           </h2>
         </div>
 
         <div class="about-right">
           <p class="about-body">
-            I partner with cross-functional teams to solve complex problems — from
-            enterprise design systems to reimagining civic services.
+            I partner with cross-functional teams to solve complex problems —
+            from enterprise systems to civic platforms.
           </p>
           <p class="about-body">
-            My process is grounded in evidence: research, rapid prototyping,
-            and continuous validation.
+            My process is grounded in research, rapid prototyping,
+            and close collaboration.
           </p>
-
           <a href="contact.html" class="btn btn--primary btn--sm">Let’s talk →</a>
         </div>
 
@@ -181,10 +286,7 @@
 
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">Hitesh.</a>
-          <p class="footer-tagline">
-            Senior UX / Product Designer<br />
-            Bengaluru, India
-          </p>
+          <p class="footer-tagline">Senior UX / Product Designer<br />Bengaluru, India</p>
         </div>
 
         <nav class="footer-nav">
@@ -208,4 +310,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-``
