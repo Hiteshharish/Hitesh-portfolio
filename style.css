@@ -125,7 +125,7 @@ p { max-width: 68ch; }
 
 .project-image {
   width: min(100%, 68ch);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 4;
   display: block;
   margin: var(--space-4) 0;
   border-radius: var(--radius-md);
