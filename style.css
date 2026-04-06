@@ -605,6 +605,34 @@ p { max-width: 68ch; }
   position: relative;
   overflow: hidden;
 }
+/* =========================================================
+   PROJECT IMAGERY
+   ========================================================= */
+/* Project images */
+.project-visual--horizon {
+  background-image: url("./assets/images/projects/horizon.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.project-visual--colorado {
+  background-image: url("./assets/images/projects/colorado.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Project card images */
+.project-card--bewell {
+  background-image: url("./assets/images/projects/bewell.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card--bloom {
+  background-image: url("./assets/images/projects/bloom.png");
+  background-size: cover;
+  background-position: center;
+}
 .project-visual--horizon { background: linear-gradient(135deg, #D6E8DB 0%, #B8D4C0 100%); }
 .project-visual--colorado { background: linear-gradient(135deg, #D4E0F0 0%, #B8C8E8 100%); }
 
