@@ -84,6 +84,7 @@ document.querySelectorAll('.project-row').forEach(row => {
 const form       = document.getElementById('contactForm');
 const submitBtn  = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
+if (formSuccess) formSuccess.hidden = true;
 
 if (form) {
   const fields = {
