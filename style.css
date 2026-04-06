@@ -943,7 +943,7 @@ p { max-width: 68ch; }
 
 .proj-body {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   gap: var(--space-10);
   align-items: start;
 }
