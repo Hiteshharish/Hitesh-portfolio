@@ -923,7 +923,7 @@ p { max-width: 68ch; }
   border-bottom: 1px solid rgba(26,24,20,0.10);
 }
 .proj-section--01 { background: var(--cream); }
-.proj-section--02 { background: var(--cream-dark); }
+.proj-section--02 { background: #F6F4EF; }
 .proj-section--03 { background: var(--green-muted); }
 .proj-section--04 { background: #F5EDE8; }
 
