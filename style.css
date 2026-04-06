@@ -113,6 +113,17 @@ h3 {
 em { font-family: var(--font-display); font-style: italic; }
 p { max-width: 68ch; }
 
+/* Image placeholder */
+.image-placeholder {
+  width: 68ch;
+  height: 68ch;
+  background: #f5f5f5;
+  border: 2px dashed #ccc;
+  border-radius: var(--radius-md);
+  display: block;
+  margin: var(--space-4) 0;
+}
+
 /* --- LAYOUT --- */
 .container {
   width: 100%;
