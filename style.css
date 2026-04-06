@@ -1050,6 +1050,36 @@ p { max-width: 68ch; }
 }
 
 /* =========================================================
+   CASE STUDY IMAGE FIX (projects.html)
+   ========================================================= */
+
+/* Base image styling */
+.project-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+  /* Visual polish */
+  margin-block: var(--space-6);
+  border-radius: var(--radius-xl);
+
+  /* Prevent oversized rendering */
+  object-fit: contain;
+}
+
+/* Optional visual containment for large screens */
+.proj-info .project-image {
+  max-width: 960px;
+}
+
+/* Center images inside content column */
+.proj-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
    CONTACT PAGE
    ========================================================= */
 .contact-section { padding-top: var(--space-9); }
