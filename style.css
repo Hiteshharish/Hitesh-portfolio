@@ -115,13 +115,21 @@ p { max-width: 68ch; }
 
 /* Image placeholder */
 .image-placeholder {
-  width: 68ch;
-  height: 68ch;
+  width: min(100%, 68ch);
+  aspect-ratio: 1 / 1;
   background: #f5f5f5;
   border: 2px dashed #ccc;
   border-radius: var(--radius-md);
+  margin: var(--space-4) 0;
+}
+
+.project-image {
+  width: min(100%, 68ch);
+  aspect-ratio: 1 / 1;
   display: block;
   margin: var(--space-4) 0;
+  border-radius: var(--radius-md);
+  object-fit: cover;
 }
 
 /* --- LAYOUT --- */
