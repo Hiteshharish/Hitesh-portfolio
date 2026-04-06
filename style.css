@@ -607,19 +607,7 @@ p { max-width: 68ch; }
 }
 
 /* Project images */
-/* Text readability overlay */
-.project-visual::after,
-.project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.45)
-  );
-  pointer-events: none;
-}
+
 .project-visual--horizon {
   background-image: url("assets/images/projects/horizon.png");
   background-size: cover;
