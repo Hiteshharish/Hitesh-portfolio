@@ -1,277 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bewell — Hitesh, UX / Product Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">Hitesh.</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <div class="nav-links">
-      <a href="projects.html" class="nav-link nav-link--active">Work</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="nav-link nav-link--resume">Résumé ↗</a>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html"><div class="sidebar-avatar"><img src="./assets/profile.jpeg" alt="Hitesh" /></div></a>
+    <div class="mobile-header">
+      <span style="font-size:0.9375rem;font-weight:500;color:var(--ink);">Hitesh.</span>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" id="navToggle"><span></span><span></span></button>
     </div>
-  </nav>
+    <nav class="sidebar-nav" id="sidebarNav">
+      <a href="index.html" class="sidebar-link">Home</a>
+      <a href="projects.html" class="sidebar-link sidebar-link--active">Work</a>
+      <a href="contact.html" class="sidebar-link">Contact</a>
+      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="sidebar-link">Résumé ↗</a>
+    </nav>
+    <div class="sidebar-contact" id="sidebarContact">
+      <span class="sidebar-contact-label">Get in touch</span>
+      <div class="avail-row"><span class="dot dot--green"></span><span class="avail-label">Available</span></div>
+      <a href="mailto:hitesh.h2@gmail.com">hitesh.h2@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </aside>
 
-  <!-- CASE STUDY HERO -->
-  <header class="cs-hero cs-hero--bewell">
-    <div class="container">
-      <div class="cs-hero-inner">
-        <div class="cs-hero-meta">
-          <a href="projects.html" class="cs-back-link">← All projects</a>
-          <div class="cs-tags">
-            <span class="tag">Healthcare</span>
-            <span class="tag">AI · Wellness</span>
-            <span class="tag">Personal · 2025</span>
-          </div>
+  <main class="content">
+    <div class="content-inner">
+
+      <a href="projects.html" class="cs-back">← All projects</a>
+
+      <div class="reveal">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
+          <span class="tag">Healthcare</span><span class="tag">AI · Wellness</span><span class="tag tag--green">Personal · 2025</span>
         </div>
-        <h1 class="cs-hero-title">Bewell</h1>
-        <p class="cs-hero-subtitle">Personal — Concept Application</p>
-        <p class="cs-hero-lead">
-          An AI-powered wellness hub that unifies fragmented health data — wearables, lab results,
-          medications, and mental health check-ins — into one clear, actionable dashboard.
-          Designed for progressive disclosure, privacy, and daily habit formation.
-        </p>
+        <h1 class="page-title">Bewell</h1>
+        <p style="font-size:0.875rem;color:var(--ink-3);margin-bottom:20px;">Personal — Concept Application</p>
+        <p class="page-lead">An AI-powered wellness hub that unifies fragmented health data — wearables, lab results, medications, and mental health check-ins — into one clear, actionable dashboard. Designed for progressive disclosure, privacy, and daily habit formation.</p>
       </div>
-    </div>
-    <div class="cs-hero-image-wrap">
-      <img src="assets/images/projects/bewell.png" alt="Bewell wellness dashboard" class="cs-hero-image" />
-    </div>
-  </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="cs-main">
-    <div class="container">
-      <div class="cs-layout">
+      <img class="cs-hero-image reveal" src="assets/images/projects/bewell.png" alt="Bewell dashboard" />
 
-        <!-- LEFT: Body content -->
-        <div class="cs-body">
+      <h2 class="cs-h2 reveal">Overview</h2>
+      <div class="cs-prose reveal">
+        <p>Most people who track their health end up with data scattered across a dozen apps — a step counter here, lab results in a portal there, a meditation streak somewhere else. Bewell is a concept exploring what it would look like to bring all of that into one thoughtful, calm, and genuinely useful experience.</p>
+        <p>This is a personal concept project — a space to explore ideas around health UX, AI-generated plain-language summaries, and progressive disclosure in high-stakes information environments.</p>
+      </div>
 
-          <section class="cs-section reveal">
-            <h2 class="cs-section-heading">Overview</h2>
-            <p class="cs-text">
-              Most people who track their health end up with data scattered across a dozen apps —
-              a step counter here, lab results in a portal there, a meditation streak somewhere else.
-              Bewell is a concept exploring what it would look like to bring all of that into
-              one thoughtful, calm, and genuinely useful experience.
-            </p>
-            <p class="cs-text">
-              This is a personal concept project — not a client engagement. It's a space to explore
-              ideas around health UX, AI-generated plain-language summaries, and progressive disclosure
-              in high-stakes information environments.
-            </p>
-          </section>
+      <div class="cs-callout reveal">
+        <p>"What if your health data gave you one clear thing to focus on today — instead of twenty metrics to worry about?"</p>
+      </div>
 
-          <div class="rule"></div>
+      <img class="cs-image reveal" src="assets/images/projects/bewell0.jpg" alt="Bewell dashboard overview" />
 
-          <section class="cs-section reveal">
-            <h2 class="cs-section-heading">The Problem Space</h2>
-            <p class="cs-text">
-              Health data is increasingly available but rarely actionable. Users are overwhelmed
-              by raw numbers without context, worried about privacy, and unable to see the connections
-              between different aspects of their health. The result: most health apps are opened
-              once and abandoned.
-            </p>
-            <div class="cs-callout">
-              <p class="cs-callout-text">
-                "What if your health data gave you one clear thing to focus on today —
-                instead of twenty metrics to worry about?"
-              </p>
-            </div>
-            <img class="cs-image" src="assets/images/projects/bewell0.jpg" alt="Bewell dashboard overview" />
-          </section>
+      <h2 class="cs-h2 reveal">Design Highlights</h2>
+      <div class="cs-highlights reveal">
+        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Personalised health score</strong> — a single contextualised score with plain-language explanation of what's driving it</span></div>
+        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>AI insight summaries</strong> — clinical data translated into everyday language without oversimplifying or causing alarm</span></div>
+        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Contextual habit tracking</strong> — reminders based on your patterns, not a generic schedule</span></div>
+        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Progressive disclosure</strong> — complexity always available, never forced; depth is one tap away</span></div>
+        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Privacy-first data model</strong> — explicit consent at every step, always visible and reversible</span></div>
+        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>WCAG AA compliance</strong> throughout — including accessible colour for health status indicators</span></div>
+      </div>
 
-          <div class="rule"></div>
+      <img class="cs-image reveal" src="assets/images/projects/bewell1.jpg" alt="Bewell habit tracker" />
 
-          <section class="cs-section reveal">
-            <h2 class="cs-section-heading">Design Highlights</h2>
-            <ul class="cs-highlight-list">
-              <li>
-                <span class="cs-highlight-label">Personalised health score</span>
-                <p class="cs-highlight-desc">A single, contextualised score derived from multiple data sources — with plain-language explanation of what's driving it.</p>
-              </li>
-              <li>
-                <span class="cs-highlight-label">AI insight summaries</span>
-                <p class="cs-highlight-desc">AI-generated summaries that translate clinical data into everyday language — without oversimplifying or causing alarm.</p>
-              </li>
-              <li>
-                <span class="cs-highlight-label">Contextual habit tracking</span>
-                <p class="cs-highlight-desc">Reminders based on your patterns, not a generic schedule. If you sleep late, your morning nudge adjusts accordingly.</p>
-              </li>
-              <li>
-                <span class="cs-highlight-label">Progressive disclosure</span>
-                <p class="cs-highlight-desc">Complexity is always available — but never forced. Depth is one tap away, not the default view.</p>
-              </li>
-              <li>
-                <span class="cs-highlight-label">Privacy-first data model</span>
-                <p class="cs-highlight-desc">Explicit data consent at every step. What's shared, with whom, and for what — always visible and always reversible.</p>
-              </li>
-            </ul>
-            <img class="cs-image" src="assets/images/projects/bewell1.jpg" alt="Bewell habit tracker and insights" />
-          </section>
+      <div class="cs-meta-grid reveal">
+        <div class="cs-meta-cell"><span class="cs-meta-label">Type</span><span class="cs-meta-value">Personal concept</span></div>
+        <div class="cs-meta-cell"><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">2025 · 6-week sprint</span></div>
+        <div class="cs-meta-cell"><span class="cs-meta-label">Focus</span><span class="cs-meta-value">IA, AI-assisted UI, Progressive disclosure, Privacy UX</span></div>
+        <div class="cs-meta-cell"><span class="cs-meta-label">Tools</span><span class="cs-meta-value">Figma, FigJam, Maze</span></div>
+      </div>
 
-          <div class="rule"></div>
-
-          <section class="cs-section reveal">
-            <h2 class="cs-section-heading">Key Design Decisions</h2>
-            <div class="cs-role-grid">
-              <div class="cs-role-item">
-                <span class="cs-role-label">Gentle nudges over overwhelming metrics</span>
-                <p class="cs-role-desc">The dashboard leads with one recommended action, not a wall of numbers. Everything else is available on request.</p>
-              </div>
-              <div class="cs-role-item">
-                <span class="cs-role-label">Accessible colour for health status</span>
-                <p class="cs-role-desc">Status indicators never rely on colour alone — always paired with shape, pattern, or label.</p>
-              </div>
-              <div class="cs-role-item">
-                <span class="cs-role-label">One daily summary</span>
-                <p class="cs-role-desc">A single notification per day — not a stream. Reduces anxiety, increases signal-to-noise ratio.</p>
-              </div>
-              <div class="cs-role-item">
-                <span class="cs-role-label">Full WCAG AA compliance</span>
-                <p class="cs-role-desc">Health tools serve people who may be stressed, distracted, or living with disabilities. Accessibility isn't optional here.</p>
-              </div>
-            </div>
-          </section>
-
+      <div class="cs-other reveal">
+        <p class="cs-other-heading">Other projects</p>
+        <div class="cs-other-list">
+          <a href="horizon.html" class="cs-other-item">
+            <div class="cs-other-item-left"><span class="cs-other-item-name">Horizon Client</span><span class="cs-other-item-client">Omnissa · Enterprise · 2025</span></div>
+            <span class="cs-other-item-arrow">→</span>
+          </a>
+          <a href="colorado.html" class="cs-other-item">
+            <div class="cs-other-item-left"><span class="cs-other-item-name">Colorado Peak</span><span class="cs-other-item-client">Deloitte · Civic Tech · 2022</span></div>
+            <span class="cs-other-item-arrow">→</span>
+          </a>
+          <a href="bloom.html" class="cs-other-item">
+            <div class="cs-other-item-left"><span class="cs-other-item-name">Bloom</span><span class="cs-other-item-client">Deloitte · Healthcare · 2017</span></div>
+            <span class="cs-other-item-arrow">→</span>
+          </a>
         </div>
-
-        <!-- RIGHT: Sidebar -->
-        <aside class="cs-sidebar">
-          <div class="cs-sidebar-card reveal">
-            <h3 class="cs-aside-heading">Project Type</h3>
-            <p class="cs-sidebar-text">Personal concept — self-directed exploration of health UX and AI interface design.</p>
-          </div>
-
-          <div class="cs-sidebar-card reveal">
-            <h3 class="cs-aside-heading">Focus Areas</h3>
-            <ul class="cs-detail-list">
-              <li>Information architecture</li>
-              <li>AI-assisted UI patterns</li>
-              <li>Progressive disclosure</li>
-              <li>Accessible data visualisation</li>
-              <li>Privacy UX</li>
-            </ul>
-          </div>
-
-          <div class="cs-sidebar-card reveal">
-            <h3 class="cs-aside-heading">Tools</h3>
-            <ul class="cs-detail-list">
-              <li>Figma (design & prototype)</li>
-              <li>FigJam (ideation)</li>
-              <li>Maze (usability testing)</li>
-            </ul>
-          </div>
-
-          <div class="cs-sidebar-card reveal">
-            <h3 class="cs-aside-heading">Timeline</h3>
-            <p class="cs-sidebar-text">2025 · 6-week concept sprint</p>
-          </div>
-        </aside>
-
       </div>
+
     </div>
+    <footer class="site-footer"><div class="site-footer-inner"><p class="footer-copy">© 2025 Hitesh Harish. All rights reserved.</p><div class="footer-links"><a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a></div></div></footer>
   </main>
-
-  <!-- OTHER PROJECTS -->
-  <section class="cs-other-projects">
-    <div class="container">
-      <div class="cs-other-header">
-        <h2 class="cs-other-title">Other projects</h2>
-        <a href="projects.html" class="text-link">View all →</a>
-      </div>
-      <div class="cs-other-grid">
-
-        <a href="horizon.html" class="cs-other-card cs-other-card--horizon">
-          <div class="cs-other-card-inner">
-            <div class="cs-other-num">01</div>
-            <div class="cs-other-tags">
-              <span class="tag">Enterprise</span>
-              <span class="tag">App Modernization</span>
-            </div>
-            <h3 class="cs-other-name">Horizon Client</h3>
-            <p class="cs-other-client">Omnissa · 2025</p>
-            <span class="cs-other-cta">View project →</span>
-          </div>
-        </a>
-
-        <a href="colorado.html" class="cs-other-card cs-other-card--colorado">
-          <div class="cs-other-card-inner">
-            <div class="cs-other-num">02</div>
-            <div class="cs-other-tags">
-              <span class="tag">Civic Tech</span>
-              <span class="tag">Government</span>
-            </div>
-            <h3 class="cs-other-name">Colorado Peak</h3>
-            <p class="cs-other-client">Deloitte · 2022</p>
-            <span class="cs-other-cta">View project →</span>
-          </div>
-        </a>
-
-        <a href="bloom.html" class="cs-other-card cs-other-card--bloom">
-          <div class="cs-other-card-inner">
-            <div class="cs-other-num">04</div>
-            <div class="cs-other-tags">
-              <span class="tag">Healthcare</span>
-              <span class="tag">Emergency Triage</span>
-            </div>
-            <h3 class="cs-other-name">Bloom</h3>
-            <p class="cs-other-client">Deloitte · 2017</p>
-            <span class="cs-other-cta">View project →</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
-  <section class="cta-band">
-    <div class="container">
-      <div class="cta-band-inner">
-        <p class="cta-band-eyebrow">Like what you see?</p>
-        <h2 class="cta-band-headline">Let's talk about your next project.</h2>
-        <a href="contact.html" class="btn btn--invert">Get in touch →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">Hitesh.</a>
-          <p class="footer-tagline">Senior UX / Product Designer<br/>Bengaluru, India</p>
-        </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Work</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a>
-          <a href="https://dribbble.com/hiteshdesign" target="_blank" rel="noopener">Dribbble ↗</a>
-        </div>
-        <p class="footer-copy">© 2025 Hitesh. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-  <script src="case-study.js"></script>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
