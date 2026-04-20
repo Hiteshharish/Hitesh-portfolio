@@ -6,167 +6,291 @@
   <title>Horizon Client — Hitesh, UX / Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
-<div class="layout">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <a href="index.html"><div class="sidebar-avatar"><img src="./assets/profile.jpeg" alt="Hitesh" /></div></a>
-    <div class="mobile-header">
-      <span style="font-size:0.9375rem;font-weight:500;color:var(--ink);">Hitesh.</span>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" id="navToggle"><span></span><span></span></button>
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Hitesh.</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="projects.html" class="nav-link nav-link--active">Work</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="nav-link nav-link--resume">Résumé ↗</a>
     </div>
-    <nav class="sidebar-nav" id="sidebarNav">
-      <a href="index.html" class="sidebar-link">Home</a>
-      <a href="projects.html" class="sidebar-link sidebar-link--active">Work</a>
-      <a href="contact.html" class="sidebar-link">Contact</a>
-      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="sidebar-link">Résumé ↗</a>
-    </nav>
-    <div class="sidebar-contact" id="sidebarContact">
-      <span class="sidebar-contact-label">Get in touch</span>
-      <div class="avail-row"><span class="dot dot--green"></span><span class="avail-label">Available</span></div>
-      <a href="mailto:hitesh.h2@gmail.com">hitesh.h2@gmail.com</a>
-      <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-  </aside>
+  </nav>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <div class="content-inner">
-
-      <a href="projects.html" class="cs-back">← All projects</a>
-
-      <!-- HEADER -->
-      <div class="reveal">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
-          <span class="tag">Enterprise</span>
-          <span class="tag">App Modernization</span>
-          <span class="tag tag--green">Omnissa · 2025</span>
+  <!-- CASE STUDY HERO -->
+  <header class="cs-hero cs-hero--horizon">
+    <div class="container">
+      <div class="cs-hero-inner">
+        <div class="cs-hero-meta">
+          <a href="projects.html" class="cs-back-link">← All projects</a>
+          <div class="cs-tags">
+            <span class="tag">Enterprise</span>
+            <span class="tag">App Modernization</span>
+            <span class="tag">Omnissa · 2025</span>
+          </div>
         </div>
-        <h1 class="page-title">Horizon Client</h1>
-        <p style="font-size:0.875rem;color:var(--ink-3);margin-bottom:20px;">Omnissa (formerly VMware)</p>
-        <p class="page-lead">
+        <h1 class="cs-hero-title">Horizon Client</h1>
+        <p class="cs-hero-subtitle">Omnissa (formerly VMware)</p>
+        <p class="cs-hero-lead">
           A cross-platform enterprise client enabling secure access to virtual desktops
           from any device. Led design system modernization across 6 platforms with WCAG AA compliance.
         </p>
-      </div>
-
-      <!-- IMPACT -->
-      <div class="cs-impact-band reveal">
-        <div class="cs-impact-item">
-          <span class="cs-impact-num">30–40%</span>
-          <span class="cs-impact-label">Faster task completion</span>
-        </div>
-        <div class="cs-impact-item">
-          <span class="cs-impact-num">+15%</span>
-          <span class="cs-impact-label">Usability score improvement</span>
-        </div>
-        <div class="cs-impact-item">
-          <span class="cs-impact-num">~30%</span>
-          <span class="cs-impact-label">Reduced onboarding time</span>
-        </div>
-        <div class="cs-impact-item">
-          <span class="cs-impact-num">WCAG AA</span>
-          <span class="cs-impact-label">Full compliance</span>
+        <div class="cs-hero-stats">
+          <div class="cs-stat">
+            <strong>30–40%</strong>
+            <span>Faster task completion</span>
+          </div>
+          <div class="cs-stat">
+            <strong>+15%</strong>
+            <span>Usability score improvement</span>
+          </div>
+          <div class="cs-stat">
+            <strong>~30%</strong>
+            <span>Reduced onboarding time</span>
+          </div>
+          <div class="cs-stat">
+            <strong>WCAG AA</strong>
+            <span>Full compliance achieved</span>
+          </div>
         </div>
       </div>
-
-      <!-- HERO IMAGE -->
-      <img class="cs-hero-image reveal" src="assets/images/projects/horizon.png" alt="Horizon Client" />
-
-      <!-- OVERVIEW -->
-      <h2 class="cs-h2 reveal">Overview</h2>
-      <div class="cs-prose reveal">
-        <p>Horizon Client is a trusted legacy solution in the Omnissa product lineup — redesigned from the ground up. It enables end users to connect to virtual desktops from any device, anywhere, across Windows, macOS, iOS, Android, Linux, and Chrome OS.</p>
-        <p>The product serves enterprise IT teams and end users in organisations with tens of thousands of seats, where even small friction in the daily login-and-connect workflow compounds at scale.</p>
-      </div>
-
-      <!-- CHALLENGE -->
-      <h2 class="cs-h2 reveal">The Challenge</h2>
-      <div class="cs-prose reveal">
-        <p>The core problem was the absence of a unified design system. This created inconsistent experiences across platforms and engineering inefficiencies due to the lack of a single source of truth.</p>
-      </div>
-      <div class="cs-callout reveal">
-        <p>"Inconsistency across six platforms wasn't just a visual problem — it created real cognitive load for IT admins managing fleets across devices."</p>
-      </div>
-      <img class="cs-image reveal" src="assets/images/projects/horizon0.jpg" alt="Horizon Client — before state" />
-
-      <!-- APPROACH -->
-      <h2 class="cs-h2 reveal">Our Approach</h2>
-      <div class="cs-prose reveal">
-        <p>We began with a comprehensive design audit — reviewing navigation patterns, action consistency, system feedback, and accessibility — using data to establish a clear baseline.</p>
-        <p>We partnered with the Research team to align stakeholders on a research plan focused on real user pain points. In parallel, we proposed a phased design system approach that balanced quick wins with long-term investment.</p>
-      </div>
-      <img class="cs-image reveal" src="assets/images/projects/horizon1.jpg" alt="Horizon Client — design system" />
-
-      <!-- META -->
-      <div class="cs-meta-grid reveal">
-        <div class="cs-meta-cell">
-          <span class="cs-meta-label">Role</span>
-          <span class="cs-meta-value">Lead Product Designer</span>
-        </div>
-        <div class="cs-meta-cell">
-          <span class="cs-meta-label">Timeline</span>
-          <span class="cs-meta-value">2024–2025 · Ongoing</span>
-        </div>
-        <div class="cs-meta-cell">
-          <span class="cs-meta-label">Responsibilities</span>
-          <span class="cs-meta-value">Design System, Accessibility, Cross-platform UX, Stakeholder Alignment</span>
-        </div>
-        <div class="cs-meta-cell">
-          <span class="cs-meta-label">Platforms</span>
-          <span class="cs-meta-value">Windows, macOS, iOS, Android, Linux, Chrome OS</span>
-        </div>
-      </div>
-
-      <div class="cs-nda reveal">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M8 5v4M8 10.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <p>Full case study available on request due to NDA restrictions. <a href="contact.html">Get in touch →</a></p>
-      </div>
-
-      <!-- OTHER PROJECTS -->
-      <div class="cs-other reveal">
-        <p class="cs-other-heading">Other projects</p>
-        <div class="cs-other-list">
-          <a href="colorado.html" class="cs-other-item">
-            <div class="cs-other-item-left">
-              <span class="cs-other-item-name">Colorado Peak</span>
-              <span class="cs-other-item-client">Deloitte · Civic Tech · 2022</span>
-            </div>
-            <span class="cs-other-item-arrow">→</span>
-          </a>
-          <a href="bewell.html" class="cs-other-item">
-            <div class="cs-other-item-left">
-              <span class="cs-other-item-name">Bewell</span>
-              <span class="cs-other-item-client">Personal · Healthcare · 2025</span>
-            </div>
-            <span class="cs-other-item-arrow">→</span>
-          </a>
-          <a href="bloom.html" class="cs-other-item">
-            <div class="cs-other-item-left">
-              <span class="cs-other-item-name">Bloom</span>
-              <span class="cs-other-item-client">Deloitte · Healthcare · 2017</span>
-            </div>
-            <span class="cs-other-item-arrow">→</span>
-          </a>
-        </div>
-      </div>
-
     </div>
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <p class="footer-copy">© 2025 Hitesh Harish. All rights reserved.</p>
-        <div class="footer-links">
+    <div class="cs-hero-image-wrap">
+      <img src="assets/images/projects/horizon.png" alt="Horizon Client design system" class="cs-hero-image" />
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- LEFT: Body content -->
+        <div class="cs-body">
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">Overview</h2>
+            <p class="cs-text">
+              Horizon Client is a trusted legacy solution in the Omnissa product lineup —
+              redesigned from the ground up. It enables end users to connect to virtual desktops
+              from any device, anywhere, across Windows, macOS, iOS, Android, Linux, and Chrome OS.
+            </p>
+            <p class="cs-text">
+              The product serves enterprise IT teams and end users in organisations with tens of thousands
+              of seats, where even small friction in the daily login-and-connect workflow compounds at scale.
+            </p>
+          </section>
+
+          <div class="rule"></div>
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">The Challenge</h2>
+            <p class="cs-text">
+              The core problem was the absence of a unified design system. This created inconsistent
+              experiences across platforms and engineering inefficiencies due to the lack of a single
+              source of truth. We needed to understand how these problems affected users before
+              proposing any solution.
+            </p>
+            <div class="cs-callout">
+              <p class="cs-callout-text">
+                "Inconsistency across six platforms wasn't just a visual problem — it created
+                real cognitive load for IT admins managing fleets across devices."
+              </p>
+            </div>
+            <img class="cs-image" src="assets/images/projects/horizon0.jpg" alt="Horizon Client challenge — before state" />
+          </section>
+
+          <div class="rule"></div>
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">Our Approach</h2>
+            <p class="cs-text">
+              We began with a comprehensive design audit — reviewing navigation patterns, action
+              consistency, system feedback, and accessibility — using data to establish a clear baseline.
+            </p>
+            <p class="cs-text">
+              We partnered with the Research team to align stakeholders on a research plan focused
+              on real user pain points. In parallel, we proposed a phased design system approach
+              that balanced quick wins with long-term investment, driving immediate improvements
+              while building a scalable, consistent, and accessible experience across all platforms.
+            </p>
+            <img class="cs-image" src="assets/images/projects/horizon1.jpg" alt="Horizon Client approach — design system" />
+          </section>
+
+          <div class="rule"></div>
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">My Role</h2>
+            <div class="cs-role-grid">
+              <div class="cs-role-item">
+                <span class="cs-role-label">Lead Product Designer</span>
+                <p class="cs-role-desc">Owned end-to-end design across all six platforms, coordinating with 4 engineering pods.</p>
+              </div>
+              <div class="cs-role-item">
+                <span class="cs-role-label">Design System Architecture</span>
+                <p class="cs-role-desc">Defined token structure, component APIs, and documentation strategy.</p>
+              </div>
+              <div class="cs-role-item">
+                <span class="cs-role-label">Accessibility Auditing</span>
+                <p class="cs-role-desc">Led WCAG AA audit and remediation across all surfaces, achieving full compliance.</p>
+              </div>
+              <div class="cs-role-item">
+                <span class="cs-role-label">Stakeholder Alignment</span>
+                <p class="cs-role-desc">Facilitated cross-functional design reviews with Product, Engineering, and Legal.</p>
+              </div>
+            </div>
+          </section>
+
+          <div class="cs-nda-note reveal">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 5v4M8 10.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <p>Full case study available on request due to NDA restrictions. <a href="contact.html" class="cs-nda-link">Get in touch →</a></p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="cs-sidebar">
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Impact</h3>
+            <div class="cs-impact-list">
+              <div class="cs-impact-row">
+                <strong class="cs-impact-num">30–40%</strong>
+                <span class="cs-impact-desc">Reduction in task completion time for IT admin workflows</span>
+              </div>
+              <div class="cs-impact-row">
+                <strong class="cs-impact-num">+15%</strong>
+                <span class="cs-impact-desc">Usability score improvement from user interviews</span>
+              </div>
+              <div class="cs-impact-row">
+                <strong class="cs-impact-num">~30%</strong>
+                <span class="cs-impact-desc">Reduction in onboarding and training time</span>
+              </div>
+              <div class="cs-impact-row">
+                <strong class="cs-impact-num">WCAG AA</strong>
+                <span class="cs-impact-desc">Full compliance achieved, mitigating legal and reputational risks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Deliverables</h3>
+            <ul class="cs-detail-list">
+              <li>Unified design system (6 platforms)</li>
+              <li>Component library in Figma</li>
+              <li>WCAG AA audit report</li>
+              <li>Design token documentation</li>
+              <li>Research synthesis deck</li>
+            </ul>
+          </div>
+
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Timeline</h3>
+            <p class="cs-sidebar-text">2024–2025 · Ongoing</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- OTHER PROJECTS -->
+  <section class="cs-other-projects">
+    <div class="container">
+      <div class="cs-other-header">
+        <h2 class="cs-other-title">Other projects</h2>
+        <a href="projects.html" class="text-link">View all →</a>
+      </div>
+      <div class="cs-other-grid">
+
+        <a href="colorado.html" class="cs-other-card cs-other-card--colorado">
+          <div class="cs-other-card-inner">
+            <div class="cs-other-num">02</div>
+            <div class="cs-other-tags">
+              <span class="tag">Civic Tech</span>
+              <span class="tag">Government</span>
+            </div>
+            <h3 class="cs-other-name">Colorado Peak</h3>
+            <p class="cs-other-client">Deloitte · 2022</p>
+            <span class="cs-other-cta">View project →</span>
+          </div>
+        </a>
+
+        <a href="bewell.html" class="cs-other-card cs-other-card--bewell">
+          <div class="cs-other-card-inner">
+            <div class="cs-other-num">03</div>
+            <div class="cs-other-tags">
+              <span class="tag">Healthcare</span>
+              <span class="tag">AI · Wellness</span>
+            </div>
+            <h3 class="cs-other-name">Bewell</h3>
+            <p class="cs-other-client">Personal · 2025</p>
+            <span class="cs-other-cta">View project →</span>
+          </div>
+        </a>
+
+        <a href="bloom.html" class="cs-other-card cs-other-card--bloom">
+          <div class="cs-other-card-inner">
+            <div class="cs-other-num">04</div>
+            <div class="cs-other-tags">
+              <span class="tag">Healthcare</span>
+              <span class="tag">Emergency Triage</span>
+            </div>
+            <h3 class="cs-other-name">Bloom</h3>
+            <p class="cs-other-client">Deloitte · 2017</p>
+            <span class="cs-other-cta">View project →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <p class="cta-band-eyebrow">Like what you see?</p>
+        <h2 class="cta-band-headline">Let's talk about your next project.</h2>
+        <a href="contact.html" class="btn btn--invert">Get in touch →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Hitesh.</a>
+          <p class="footer-tagline">Senior UX / Product Designer<br/>Bengaluru, India</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
           <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a>
+          <a href="https://dribbble.com/hiteshdesign" target="_blank" rel="noopener">Dribbble ↗</a>
         </div>
+        <p class="footer-copy">© 2025 Hitesh. All rights reserved.</p>
       </div>
-    </footer>
-  </main>
-</div>
-<script src="main.js"></script>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="case-study.js"></script>
 </body>
 </html>

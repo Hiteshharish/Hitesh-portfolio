@@ -6,161 +6,313 @@
   <title>Work — Hitesh, UX / Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="layout">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <a href="index.html">
-      <div class="sidebar-avatar">
-        <img src="./assets/profile.jpeg" alt="Hitesh" />
-      </div>
-    </a>
-    <div class="mobile-header">
-      <span style="font-size:0.9375rem; font-weight:500; color:var(--ink);">Hitesh.</span>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" id="navToggle">
-        <span></span><span></span>
-      </button>
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Hitesh.</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="projects.html" class="nav-link nav-link--active">Work</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="nav-link nav-link--resume">Résumé ↗</a>
     </div>
-    <nav class="sidebar-nav" id="sidebarNav">
-      <a href="index.html" class="sidebar-link">Home</a>
-      <a href="projects.html" class="sidebar-link sidebar-link--active">Work</a>
-      <a href="contact.html" class="sidebar-link">Contact</a>
-      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="sidebar-link">Résumé ↗</a>
-    </nav>
-    <div class="sidebar-contact" id="sidebarContact">
-      <span class="sidebar-contact-label">Get in touch</span>
-      <div class="avail-row">
-        <span class="dot dot--green"></span>
-        <span class="avail-label">Available for opportunities</span>
-      </div>
-      <a href="mailto:hitesh.h2@gmail.com">hitesh.h2@gmail.com</a>
-      <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="https://dribbble.com/hiteshdesign" target="_blank" rel="noopener">Dribbble ↗</a>
-      <a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a>
-    </div>
-  </aside>
+  </nav>
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
-    <div class="content-inner">
-
-      <div class="reveal">
-        <h1 class="page-title">Work</h1>
-        <p class="page-lead">
-          Four projects across enterprise, civic tech, and healthcare.
-          Each begins with deep listening and ends with something that
-          genuinely works for the people who use it.
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <div class="page-header-meta">
+          <span class="label label--muted">Selected work</span>
+          <span class="label label--muted">4 projects</span>
+        </div>
+        <h1 class="page-headline">
+          Four projects.<br/>Three industries.<br/><em>One approach.</em>
+        </h1>
+        <p class="page-subheadline">
+          Each project begins with deep listening and ends with something that genuinely works for the people who use it.
         </p>
       </div>
-
-      <!-- PROJECT LIST -->
-      <div class="project-list">
-
-        <!-- 01 Horizon -->
-        <a href="horizon.html" class="project-item project-item--horizon reveal">
-          <div class="project-item-top">
-            <div class="project-item-tags">
-              <span class="tag">Enterprise</span>
-              <span class="tag">App Modernization</span>
-            </div>
-            <span class="project-item-year">Omnissa · 2025</span>
-          </div>
-          <h2 class="project-item-title">Horizon Client</h2>
-          <p class="project-item-client">Omnissa (formerly VMware)</p>
-          <p class="project-item-desc">
-            A cross-platform enterprise client enabling secure access to virtual desktops
-            from any device. Led design system modernization across 6 platforms with WCAG AA compliance.
-          </p>
-          <div class="project-item-image-wrap">
-            <img src="assets/images/projects/horizon.png" alt="Horizon Client" loading="lazy" />
-          </div>
-          <span class="project-item-cta" style="margin-top:16px;">View case study →</span>
-        </a>
-
-        <!-- 02 Colorado -->
-        <a href="colorado.html" class="project-item project-item--colorado reveal">
-          <div class="project-item-top">
-            <div class="project-item-tags">
-              <span class="tag">Civic Tech</span>
-              <span class="tag">Government</span>
-            </div>
-            <span class="project-item-year">Deloitte · 2022</span>
-          </div>
-          <h2 class="project-item-title">Colorado Peak</h2>
-          <p class="project-item-client">Deloitte Consulting — Internal Pitch</p>
-          <p class="project-item-desc">
-            Reimagining access to state services through a human-centred, accessible system
-            connecting healthcare, employment, and benefits for citizens of Colorado.
-          </p>
-          <div class="project-item-image-wrap">
-            <img src="assets/images/projects/colorado.png" alt="Colorado Peak" loading="lazy" />
-          </div>
-          <span class="project-item-cta" style="margin-top:16px;">View case study →</span>
-        </a>
-
-        <!-- 03 Bewell -->
-        <a href="bewell.html" class="project-item project-item--bewell reveal">
-          <div class="project-item-top">
-            <div class="project-item-tags">
-              <span class="tag">Healthcare</span>
-              <span class="tag">AI · Wellness</span>
-            </div>
-            <span class="project-item-year">Personal · 2025</span>
-          </div>
-          <h2 class="project-item-title">Bewell</h2>
-          <p class="project-item-client">Personal — Concept Application</p>
-          <p class="project-item-desc">
-            An AI-powered wellness dashboard unifying fragmented health data into
-            clear, actionable insights. Designed for progressive disclosure and daily habit formation.
-          </p>
-          <div class="project-item-image-wrap">
-            <img src="assets/images/projects/bewell.png" alt="Bewell" loading="lazy" />
-          </div>
-          <span class="project-item-cta" style="margin-top:16px;">View case study →</span>
-        </a>
-
-        <!-- 04 Bloom -->
-        <a href="bloom.html" class="project-item project-item--bloom reveal">
-          <div class="project-item-top">
-            <div class="project-item-tags">
-              <span class="tag">Healthcare</span>
-              <span class="tag">Emergency Triage</span>
-            </div>
-            <span class="project-item-year">Deloitte · 2017</span>
-          </div>
-          <h2 class="project-item-title">Bloom</h2>
-          <p class="project-item-client">Deloitte — Internal Pitch</p>
-          <p class="project-item-desc">
-            Improving emergency triage workflows with real-time status visibility
-            and clinician-friendly defaults. Designed for glanceability under pressure.
-          </p>
-          <div class="project-item-image-wrap">
-            <img src="assets/images/projects/bloom.png" alt="Bloom" loading="lazy" />
-          </div>
-          <span class="project-item-cta" style="margin-top:16px;">View case study →</span>
-        </a>
-
-      </div>
-
     </div>
+  </header>
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <p class="footer-copy">© 2025 Hitesh Harish. All rights reserved.</p>
-        <div class="footer-links">
+  <!-- PROJECT 01 — HORIZON CLIENT -->
+  <section class="proj-section proj-section--01">
+    <div class="container">
+      <div class="proj-header">
+        <div class="proj-index">01</div>
+        <div class="proj-tags">
+          <span class="tag">Enterprise</span>
+          <span class="tag">App Modernization</span>
+          <span class="tag">Omnissa · 2025</span>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-info">
+          <h2 class="proj-title">Horizon Client</h2>
+          <p class="proj-client">Omnissa (formerly VMware)</p>
+          <div class="rule rule--proj"></div>
+          <p class="proj-lead">
+            A trusted legacy solution in the Omnissa product lineup — redesigned from the ground up. Horizon Client enables end users to connect to virtual desktops from any device, anywhere, across Windows, macOS, iOS, Android, Linux, and Chrome OS.
+          </p>
+          <div class="proj-section-block">
+            <h3 class="proj-sub-heading">The challenge</h3>
+            <p class="proj-text">
+              The core problem was the absence of a unified design system. This created inconsistent experiences across platforms and engineering inefficiencies due to the lack of a single source of truth. We needed to understand how these problems affected users before proposing any solution.
+            </p>
+            <img class="project-image" src="assets/images/projects/horizon0.jpg" alt="Horizon Client challenge screenshot">
+          </div>
+          <div class="proj-section-block">
+            <h3 class="proj-sub-heading">Our approach</h3>
+            <p class="proj-text">
+              We began with a comprehensive design audit — reviewing navigation patterns, action consistency, system feedback, and accessibility — using data to establish a clear baseline. We partnered with the Research team to align stakeholders on a research plan focused on real user pain points. In parallel, we proposed a phased design system approach that balanced quick wins with long-term investment, driving immediate improvements while building a scalable, consistent, and accessible experience across all platforms.
+            </p>
+            <img class="project-image" src="assets/images/projects/horizon1.jpg" alt="Horizon Client approach screenshot">
+          </div>
+        </div>
+        <aside class="proj-aside">
+          <div class="proj-impact-card">
+            <h3 class="proj-aside-heading">Impact</h3>
+            <div class="impact-list">
+              <div class="impact-row">
+                <strong class="impact-num">30–40%</strong>
+                <span class="impact-desc">Reduction in task completion time for IT admin workflows</span>
+              </div>
+              <div class="impact-row">
+                <strong class="impact-num">+15%</strong>
+                <span class="impact-desc">Usability score improvement from user interviews</span>
+              </div>
+              <div class="impact-row">
+                <strong class="impact-num">~30%</strong>
+                <span class="impact-desc">Reduction in onboarding and training time</span>
+              </div>
+              <div class="impact-row">
+                <strong class="impact-num">WCAG AA</strong>
+                <span class="impact-desc">Full compliance achieved, mitigating legal and reputational risks</span>
+              </div>
+            </div>
+          </div>
+          <div class="proj-role-card">
+            <h3 class="proj-aside-heading">My role</h3>
+            <ul class="role-list">
+              <li>Lead Product Designer</li>
+              <li>Design System Architecture</li>
+              <li>Accessibility Auditing</li>
+              <li>Cross-platform UX</li>
+              <li>Stakeholder Alignment</li>
+            </ul>
+          </div>
+          <p class="proj-nda-note">
+            <em>*Full case study available on request due to NDA restrictions.</em>
+          </p>
+          <!-- SUBPAGE LINK -->
+          <a href="horizon.html" class="btn btn--primary btn--sm" style="margin-top: 8px;">View full case study →</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 02 — COLORADO PEAK -->
+  <section class="proj-section proj-section--02">
+    <div class="container">
+      <div class="proj-header">
+        <div class="proj-index">02</div>
+        <div class="proj-tags">
+          <span class="tag">Civic Tech</span>
+          <span class="tag">Government Services</span>
+          <span class="tag">Deloitte · 2022</span>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-info">
+          <h2 class="proj-title">Colorado Peak</h2>
+          <p class="proj-client">Deloitte Consulting — Internal Pitch</p>
+          <div class="rule rule--proj"></div>
+          <p class="proj-lead">
+            Reimagining how citizens of Colorado access critical state services — benefits, healthcare, employment — through a more human-centered, connected system built on accessibility, plain language, and trust.
+          </p>
+          <div class="proj-section-block">
+            <h3 class="proj-sub-heading">The challenge</h3>
+            <p class="proj-text">
+              Colorado's Peak platform served millions of citizens navigating complex benefit systems, but the legacy interface created unnecessary friction and confusion. Case workers spent significant time helping users with basic navigation rather than providing substantive support.
+            </p>
+            <img class="project-image" src="assets/images/projects/colorado0.jpg" alt="Colorado Peak challenge screenshot">
+          </div>
+          <div class="proj-section-block">
+            <h3 class="proj-sub-heading">Our approach</h3>
+            <p class="proj-text">
+              We conducted extensive field research with case workers and citizens — identifying real pain points, language barriers, and accessibility gaps in the existing system. From this foundation, we proposed a unified service portal that reduced cognitive load, used plain language throughout, and met WCAG AA standards. The design centered equity: ensuring that citizens most in need could access services without friction or fear.
+            </p>
+            <img class="project-image" src="assets/images/projects/colorado1.jpg" alt="Colorado Peak approach screenshot">
+          </div>
+        </div>
+        <aside class="proj-aside">
+          <div class="proj-role-card">
+            <h3 class="proj-aside-heading">My role</h3>
+            <ul class="role-list">
+              <li>Lead UX Designer</li>
+              <li>User Research</li>
+              <li>Research Synthesis</li>
+              <li>Service Design</li>
+              <li>Stakeholder Facilitation</li>
+              <li>Journey Mapping</li>
+            </ul>
+          </div>
+          <div class="proj-tools-card">
+            <h3 class="proj-aside-heading">Methods</h3>
+            <ul class="role-list">
+              <li>Field interviews (citizens &amp; case workers)</li>
+              <li>Affinity mapping</li>
+              <li>Service blueprinting</li>
+              <li>Accessibility audit</li>
+              <li>Prototype testing</li>
+            </ul>
+          </div>
+          <!-- SUBPAGE LINK -->
+          <a href="colorado.html" class="btn btn--primary btn--sm" style="margin-top: 8px;">View full case study →</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 03 — BEWELL -->
+  <section class="proj-section proj-section--03">
+    <div class="container">
+      <div class="proj-header">
+        <div class="proj-index">03</div>
+        <div class="proj-tags">
+          <span class="tag">Healthcare</span>
+          <span class="tag">AI · Wellness</span>
+          <span class="tag">Personal · 2025</span>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-info">
+          <h2 class="proj-title">Bewell</h2>
+          <p class="proj-client">Personal — Concept Application</p>
+          <div class="rule rule--proj"></div>
+          <p class="proj-lead">
+            An AI-powered wellness hub that unifies fragmented health data — wearables, lab results, medications, and mental health check-ins — into one clear, actionable dashboard. Designed for progressive disclosure, privacy, and daily habit formation.
+          </p>
+          <img class="project-image" src="assets/images/projects/bewell0.jpg" alt="Bewell design screenshot">
+          <div class="proj-section-block">
+            <h3 class="proj-sub-heading">Design highlights</h3>
+            <ul class="highlight-list">
+              <li>Personalised health score dashboard with contextual interpretation</li>
+              <li>AI-generated insight summaries in plain language, not medical jargon</li>
+              <li>Habit tracker with contextual reminders based on patterns, not schedules</li>
+              <li>Progressive disclosure — complexity available when needed, hidden when not</li>
+              <li>Full WCAG AA compliance throughout</li>
+            </ul>
+            <img class="project-image" src="assets/images/projects/bewell1.jpg" alt="Bewell highlight screenshot">
+          </div>
+        </div>
+        <aside class="proj-aside">
+          <div class="proj-role-card">
+            <h3 class="proj-aside-heading">Key decisions</h3>
+            <ul class="role-list">
+              <li>Gentle nudges over overwhelming metrics</li>
+              <li>Privacy-first data model</li>
+              <li>Accessible colour system for health status</li>
+              <li>Single daily summary, not a stream of notifications</li>
+            </ul>
+          </div>
+          <!-- SUBPAGE LINK -->
+          <a href="bewell.html" class="btn btn--primary btn--sm" style="margin-top: 8px;">View full case study →</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 04 — BLOOM -->
+  <section class="proj-section proj-section--04">
+    <div class="container">
+      <div class="proj-header">
+        <div class="proj-index">04</div>
+        <div class="proj-tags">
+          <span class="tag">Healthcare</span>
+          <span class="tag">Emergency Triage</span>
+          <span class="tag">Deloitte · 2017</span>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-info">
+          <h2 class="proj-title">Bloom</h2>
+          <p class="proj-client">Deloitte — Internal Pitch</p>
+          <div class="rule rule--proj"></div>
+          <p class="proj-lead">
+            A concept application that simplifies emergency triage for clinicians while keeping patients and their families informed in real time. Designed for high-stress, high-speed environments without sacrificing clinical accuracy.
+          </p>
+          <img class="project-image" src="assets/images/projects/bloom0.jpg" alt="Bloom design screenshot">
+          <div class="proj-section-block">
+            <h3 class="proj-sub-heading">Design highlights</h3>
+            <ul class="highlight-list">
+              <li>Real-time patient status board — at-a-glance triage priority</li>
+              <li>Smart triage intake flow with clinical decision support</li>
+              <li>Family-facing status updates that reduce nurse interruptions</li>
+              <li>Real-time handoff summaries to reduce error in shift transitions</li>
+              <li>Designed for glanceability under pressure</li>
+            </ul>
+            <img class="project-image" src="assets/images/projects/bloom1.jpg" alt="Bloom highlight screenshot">
+          </div>
+        </div>
+        <aside class="proj-aside">
+          <div class="proj-role-card">
+            <h3 class="proj-aside-heading">Design principles</h3>
+            <ul class="role-list">
+              <li>Glanceability over completeness</li>
+              <li>One primary action per screen</li>
+              <li>High-contrast for clinical environments</li>
+              <li>Reduce cognitive load under stress</li>
+            </ul>
+          </div>
+          <!-- SUBPAGE LINK -->
+          <a href="bloom.html" class="btn btn--primary btn--sm" style="margin-top: 8px;">View full case study →</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <p class="cta-band-eyebrow">Like what you see?</p>
+        <h2 class="cta-band-headline">Let's talk about your next project.</h2>
+        <a href="contact.html" class="btn btn--invert">Get in touch →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Hitesh.</a>
+          <p class="footer-tagline">Senior UX / Product Designer<br/>Bengaluru, India</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
           <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a>
           <a href="https://dribbble.com/hiteshdesign" target="_blank" rel="noopener">Dribbble ↗</a>
         </div>
+        <p class="footer-copy">© 2025 Hitesh. All rights reserved.</p>
       </div>
-    </footer>
-  </main>
+    </div>
+  </footer>
 
-</div>
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

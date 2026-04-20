@@ -1,107 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bloom — Hitesh, UX / Product Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
-<div class="layout">
-  <aside class="sidebar" id="sidebar">
-    <a href="index.html"><div class="sidebar-avatar"><img src="./assets/profile.jpeg" alt="Hitesh" /></div></a>
-    <div class="mobile-header">
-      <span style="font-size:0.9375rem;font-weight:500;color:var(--ink);">Hitesh.</span>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" id="navToggle"><span></span><span></span></button>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Hitesh.</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="projects.html" class="nav-link nav-link--active">Work</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="nav-link nav-link--resume">Résumé ↗</a>
     </div>
-    <nav class="sidebar-nav" id="sidebarNav">
-      <a href="index.html" class="sidebar-link">Home</a>
-      <a href="projects.html" class="sidebar-link sidebar-link--active">Work</a>
-      <a href="contact.html" class="sidebar-link">Contact</a>
-      <a href="assets/resume/Hitesh%20resume%202026.pdf" target="_blank" rel="noopener" class="sidebar-link">Résumé ↗</a>
-    </nav>
-    <div class="sidebar-contact" id="sidebarContact">
-      <span class="sidebar-contact-label">Get in touch</span>
-      <div class="avail-row"><span class="dot dot--green"></span><span class="avail-label">Available</span></div>
-      <a href="mailto:hitesh.h2@gmail.com">hitesh.h2@gmail.com</a>
-      <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-  </aside>
+  </nav>
 
-  <main class="content">
-    <div class="content-inner">
-
-      <a href="projects.html" class="cs-back">← All projects</a>
-
-      <div class="reveal">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;">
-          <span class="tag">Healthcare</span><span class="tag">Emergency Triage</span><span class="tag tag--green">Deloitte · 2017</span>
+  <!-- CASE STUDY HERO -->
+  <header class="cs-hero cs-hero--bloom">
+    <div class="container">
+      <div class="cs-hero-inner">
+        <div class="cs-hero-meta">
+          <a href="projects.html" class="cs-back-link">← All projects</a>
+          <div class="cs-tags">
+            <span class="tag">Healthcare</span>
+            <span class="tag">Emergency Triage</span>
+            <span class="tag">Deloitte · 2017</span>
+          </div>
         </div>
-        <h1 class="page-title">Bloom</h1>
-        <p style="font-size:0.875rem;color:var(--ink-3);margin-bottom:20px;">Deloitte — Internal Pitch</p>
-        <p class="page-lead">A concept application that simplifies emergency triage for clinicians while keeping patients and their families informed in real time. Designed for high-stress, high-speed environments without sacrificing clinical accuracy.</p>
+        <h1 class="cs-hero-title">Bloom</h1>
+        <p class="cs-hero-subtitle">Deloitte — Internal Pitch</p>
+        <p class="cs-hero-lead">
+          A concept application that simplifies emergency triage for clinicians while keeping
+          patients and their families informed in real time. Designed for high-stress, high-speed
+          environments without sacrificing clinical accuracy.
+        </p>
       </div>
-
-      <img class="cs-hero-image reveal" src="assets/images/projects/bloom.png" alt="Bloom emergency triage" />
-
-      <h2 class="cs-h2 reveal">Overview</h2>
-      <div class="cs-prose reveal">
-        <p>Emergency departments operate under immense pressure — information is fragmented, handoffs are error-prone, and families in waiting rooms receive little or no updates about their loved ones.</p>
-        <p>Bloom is a design concept exploring how thoughtful UX can reduce cognitive load for clinicians while improving transparency for patients and families. This was a Deloitte internal pitch: making the case that good design in emergency care isn't a luxury — it's a patient safety issue.</p>
-      </div>
-
-      <div class="cs-callout reveal">
-        <p>"Designed for glanceability — because in an emergency department, a three-second read is sometimes all you get."</p>
-      </div>
-
-      <img class="cs-image reveal" src="assets/images/projects/bloom0.jpg" alt="Bloom triage board" />
-
-      <h2 class="cs-h2 reveal">Design Highlights</h2>
-      <div class="cs-highlights reveal">
-        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Real-time patient status board</strong> — at-a-glance triage priority; colour, shape, and position all carry meaning without relying on colour alone</span></div>
-        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Smart triage intake</strong> — clinical decision support built into the intake flow, surfacing relevant protocols based on presenting symptoms</span></div>
-        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Family-facing status updates</strong> — a separate display reduces nurse interruptions; calm, plain-language updates on a waiting-room screen</span></div>
-        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>Shift handoff summaries</strong> — auto-generated notes reduce transcription errors and ensure continuity of care</span></div>
-        <div class="cs-highlight-row"><span class="cs-highlight-arrow">→</span><span class="cs-highlight-text"><strong>High contrast throughout</strong> — contrast ratios exceed WCAG AA for bright clinical lighting conditions</span></div>
-      </div>
-
-      <img class="cs-image reveal" src="assets/images/projects/bloom1.jpg" alt="Bloom family and handoff screens" />
-
-      <h2 class="cs-h2 reveal">Design Principles</h2>
-      <div class="cs-prose reveal">
-        <p>Every primary screen is designed to be understood in under three seconds. One primary action per screen. Information sorted by urgency, not chronology. The most important thing is always in the same place.</p>
-      </div>
-
-      <div class="cs-meta-grid reveal">
-        <div class="cs-meta-cell"><span class="cs-meta-label">Context</span><span class="cs-meta-value">Deloitte internal pitch</span></div>
-        <div class="cs-meta-cell"><span class="cs-meta-label">Timeline</span><span class="cs-meta-value">2017 · 8-week sprint</span></div>
-        <div class="cs-meta-cell"><span class="cs-meta-label">Focus</span><span class="cs-meta-value">Clinical UX, High-stress design, Accessibility, Service design</span></div>
-        <div class="cs-meta-cell"><span class="cs-meta-label">Outputs</span><span class="cs-meta-value">Triage board, Intake flow, Family display, Handoff view, Pitch deck</span></div>
-      </div>
-
-      <div class="cs-other reveal">
-        <p class="cs-other-heading">Other projects</p>
-        <div class="cs-other-list">
-          <a href="horizon.html" class="cs-other-item">
-            <div class="cs-other-item-left"><span class="cs-other-item-name">Horizon Client</span><span class="cs-other-item-client">Omnissa · Enterprise · 2025</span></div>
-            <span class="cs-other-item-arrow">→</span>
-          </a>
-          <a href="colorado.html" class="cs-other-item">
-            <div class="cs-other-item-left"><span class="cs-other-item-name">Colorado Peak</span><span class="cs-other-item-client">Deloitte · Civic Tech · 2022</span></div>
-            <span class="cs-other-item-arrow">→</span>
-          </a>
-          <a href="bewell.html" class="cs-other-item">
-            <div class="cs-other-item-left"><span class="cs-other-item-name">Bewell</span><span class="cs-other-item-client">Personal · Healthcare · 2025</span></div>
-            <span class="cs-other-item-arrow">→</span>
-          </a>
-        </div>
-      </div>
-
     </div>
-    <footer class="site-footer"><div class="site-footer-inner"><p class="footer-copy">© 2025 Hitesh Harish. All rights reserved.</p><div class="footer-links"><a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a></div></div></footer>
+    <div class="cs-hero-image-wrap">
+      <img src="assets/images/projects/bloom.png" alt="Bloom emergency triage interface" class="cs-hero-image" />
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="cs-main">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- LEFT: Body content -->
+        <div class="cs-body">
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">Overview</h2>
+            <p class="cs-text">
+              Emergency departments operate under immense pressure — information is fragmented,
+              handoffs are error-prone, and families in waiting rooms receive little or no
+              updates about their loved ones. Bloom is a design concept exploring how thoughtful
+              UX can reduce cognitive load for clinicians while improving transparency
+              for patients and families.
+            </p>
+            <p class="cs-text">
+              This was a Deloitte internal pitch: a team of designers making the case that
+              good design in emergency care isn't a luxury — it's a patient safety issue.
+            </p>
+          </section>
+
+          <div class="rule"></div>
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">The Challenge</h2>
+            <p class="cs-text">
+              Emergency triage systems are built around clinical logic, not human factors.
+              The result is that clinicians must hold enormous amounts of information in working
+              memory, handoffs between shifts introduce dangerous gaps, and families waiting
+              outside constantly interrupt nurses for status updates — pulling attention away
+              from care delivery.
+            </p>
+            <div class="cs-callout">
+              <p class="cs-callout-text">
+                "Designed for glanceability — because in an emergency department,
+                a three-second read is sometimes all you get."
+              </p>
+            </div>
+            <img class="cs-image" src="assets/images/projects/bloom0.jpg" alt="Bloom triage board design" />
+          </section>
+
+          <div class="rule"></div>
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">Design Highlights</h2>
+            <ul class="cs-highlight-list">
+              <li>
+                <span class="cs-highlight-label">Real-time patient status board</span>
+                <p class="cs-highlight-desc">At-a-glance triage priority view for the entire department — colour, shape, and position all carry meaning without relying on colour alone.</p>
+              </li>
+              <li>
+                <span class="cs-highlight-label">Smart triage intake</span>
+                <p class="cs-highlight-desc">Clinical decision support built into the intake flow — surfacing relevant protocols based on presenting symptoms, not requiring recall.</p>
+              </li>
+              <li>
+                <span class="cs-highlight-label">Family-facing status updates</span>
+                <p class="cs-highlight-desc">A separate view for waiting families reduces nurse interruptions by 30–50% in comparable pilot systems. Calm, plain-language updates on a wall display.</p>
+              </li>
+              <li>
+                <span class="cs-highlight-label">Shift handoff summaries</span>
+                <p class="cs-highlight-desc">Auto-generated handoff notes reduce transcription errors and ensure continuity of care across team transitions.</p>
+              </li>
+            </ul>
+            <img class="cs-image" src="assets/images/projects/bloom1.jpg" alt="Bloom family-facing status and handoff screens" />
+          </section>
+
+          <div class="rule"></div>
+
+          <section class="cs-section reveal">
+            <h2 class="cs-section-heading">Design Principles</h2>
+            <div class="cs-role-grid">
+              <div class="cs-role-item">
+                <span class="cs-role-label">Glanceability over completeness</span>
+                <p class="cs-role-desc">Every primary screen is designed to be understood in under three seconds. Detail is one level deeper — always accessible, never default.</p>
+              </div>
+              <div class="cs-role-item">
+                <span class="cs-role-label">One primary action per screen</span>
+                <p class="cs-role-desc">In a high-stress environment, decision fatigue costs lives. Each screen surfaces one clear action; everything else is secondary.</p>
+              </div>
+              <div class="cs-role-item">
+                <span class="cs-role-label">High contrast for clinical environments</span>
+                <p class="cs-role-desc">Screens are viewed in bright overhead lighting, often at a distance. Contrast ratios exceed WCAG AA at every level.</p>
+              </div>
+              <div class="cs-role-item">
+                <span class="cs-role-label">Reduce cognitive load under stress</span>
+                <p class="cs-role-desc">Information is sorted by urgency, not chronology. The most important thing is always in the same place.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="cs-sidebar">
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Context</h3>
+            <p class="cs-sidebar-text">Deloitte internal pitch project. Concept designed to demonstrate the potential value of human-centered design in emergency care settings.</p>
+          </div>
+
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Focus Areas</h3>
+            <ul class="cs-detail-list">
+              <li>Clinical UX research</li>
+              <li>Information hierarchy</li>
+              <li>High-stress interface design</li>
+              <li>Accessibility in clinical settings</li>
+              <li>Service design</li>
+            </ul>
+          </div>
+
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Design Outputs</h3>
+            <ul class="cs-detail-list">
+              <li>Triage status board</li>
+              <li>Intake flow prototype</li>
+              <li>Family-facing display</li>
+              <li>Shift handoff summary view</li>
+              <li>Pitch deck for stakeholders</li>
+            </ul>
+          </div>
+
+          <div class="cs-sidebar-card reveal">
+            <h3 class="cs-aside-heading">Timeline</h3>
+            <p class="cs-sidebar-text">2017 · 8-week concept sprint</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
   </main>
-</div>
-<script src="main.js"></script>
+
+  <!-- OTHER PROJECTS -->
+  <section class="cs-other-projects">
+    <div class="container">
+      <div class="cs-other-header">
+        <h2 class="cs-other-title">Other projects</h2>
+        <a href="projects.html" class="text-link">View all →</a>
+      </div>
+      <div class="cs-other-grid">
+
+        <a href="horizon.html" class="cs-other-card cs-other-card--horizon">
+          <div class="cs-other-card-inner">
+            <div class="cs-other-num">01</div>
+            <div class="cs-other-tags">
+              <span class="tag">Enterprise</span>
+              <span class="tag">App Modernization</span>
+            </div>
+            <h3 class="cs-other-name">Horizon Client</h3>
+            <p class="cs-other-client">Omnissa · 2025</p>
+            <span class="cs-other-cta">View project →</span>
+          </div>
+        </a>
+
+        <a href="colorado.html" class="cs-other-card cs-other-card--colorado">
+          <div class="cs-other-card-inner">
+            <div class="cs-other-num">02</div>
+            <div class="cs-other-tags">
+              <span class="tag">Civic Tech</span>
+              <span class="tag">Government</span>
+            </div>
+            <h3 class="cs-other-name">Colorado Peak</h3>
+            <p class="cs-other-client">Deloitte · 2022</p>
+            <span class="cs-other-cta">View project →</span>
+          </div>
+        </a>
+
+        <a href="bewell.html" class="cs-other-card cs-other-card--bewell">
+          <div class="cs-other-card-inner">
+            <div class="cs-other-num">03</div>
+            <div class="cs-other-tags">
+              <span class="tag">Healthcare</span>
+              <span class="tag">AI · Wellness</span>
+            </div>
+            <h3 class="cs-other-name">Bewell</h3>
+            <p class="cs-other-client">Personal · 2025</p>
+            <span class="cs-other-cta">View project →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <p class="cta-band-eyebrow">Like what you see?</p>
+        <h2 class="cta-band-headline">Let's talk about your next project.</h2>
+        <a href="contact.html" class="btn btn--invert">Get in touch →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Hitesh.</a>
+          <p class="footer-tagline">Senior UX / Product Designer<br/>Bengaluru, India</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/hitesh-harish/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://www.figma.com/@hiteshh" target="_blank" rel="noopener">Figma ↗</a>
+          <a href="https://dribbble.com/hiteshdesign" target="_blank" rel="noopener">Dribbble ↗</a>
+        </div>
+        <p class="footer-copy">© 2025 Hitesh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="case-study.js"></script>
 </body>
 </html>

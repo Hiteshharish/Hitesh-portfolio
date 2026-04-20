@@ -1,46 +1,52 @@
 /**
- * Hitesh Portfolio — main.js (v2)
- * Handles: sidebar mobile toggle, scroll-reveal, contact form
+ * Hitesh Portfolio — main.js
+ * Handles: nav toggle, scroll effects, form validation, scroll-reveal
  */
 
-/* ── MOBILE SIDEBAR TOGGLE ───────────────────────── */
-const navToggle    = document.getElementById('navToggle');
-const sidebarNav   = document.getElementById('sidebarNav');
-const sidebarContact = document.getElementById('sidebarContact');
+/* ── NAV ─────────────────────────────────────────── */
+const nav        = document.querySelector('.nav');
+const navToggle  = document.querySelector('.nav-toggle');
+const navLinks   = document.querySelector('.nav-links');
 
-if (navToggle && sidebarNav) {
+// Sticky shadow on scroll
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// Hamburger toggle
+if (navToggle) {
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', String(!isOpen));
-    sidebarNav.classList.toggle('open', !isOpen);
-    if (sidebarContact) sidebarContact.classList.toggle('open', !isOpen);
+    navLinks.classList.toggle('open', !isOpen);
     document.body.style.overflow = isOpen ? '' : 'hidden';
   });
 
-  // Close on link click
-  sidebarNav.querySelectorAll('a').forEach(link => {
+  // Close on nav link click
+  navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', 'false');
-      sidebarNav.classList.remove('open');
-      if (sidebarContact) sidebarContact.classList.remove('open');
+      navLinks.classList.remove('open');
       document.body.style.overflow = '';
     });
   });
 
   // Close on outside click
   document.addEventListener('click', e => {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar && !sidebar.contains(e.target) && sidebarNav.classList.contains('open')) {
+    if (!nav.contains(e.target) && navLinks.classList.contains('open')) {
       navToggle.setAttribute('aria-expanded', 'false');
-      sidebarNav.classList.remove('open');
-      if (sidebarContact) sidebarContact.classList.remove('open');
+      navLinks.classList.remove('open');
       document.body.style.overflow = '';
     }
   });
 }
 
 /* ── SCROLL-REVEAL ───────────────────────────────── */
-const revealEls = document.querySelectorAll('.reveal');
+const revealEls = document.querySelectorAll(
+  '.hero-headline, .hero-bio, .hero-stats, .hero-ctas, ' +
+  '.project-row, .project-card, .about-inner, .proj-body, ' +
+  '.contact-inner, .cta-band-inner, .page-header-inner'
+);
 
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
@@ -50,31 +56,33 @@ if ('IntersectionObserver' in window) {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.10, rootMargin: '0px 0px -32px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   revealEls.forEach((el, i) => {
-    if (i < 3) el.style.transitionDelay = `${i * 60}ms`;
+    el.classList.add('reveal');
+    // Stagger first 3 hero elements slightly
+    if (i < 4) el.style.transitionDelay = `${i * 60}ms`;
     io.observe(el);
   });
 } else {
+  // Fallback: just show everything
   revealEls.forEach(el => el.classList.add('visible'));
 }
 
-/* ── READING PROGRESS BAR (case study pages) ─────── */
-if (document.querySelector('.cs-back')) {
-  const bar = document.createElement('div');
-  bar.setAttribute('aria-hidden', 'true');
-  bar.style.cssText = 'position:fixed;top:0;left:0;width:0%;height:2px;background:#1D4A2E;z-index:300;transition:width 80ms linear;pointer-events:none;';
-  document.body.appendChild(bar);
-  window.addEventListener('scroll', () => {
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = h > 0 ? `${Math.min((window.scrollY / h) * 100, 100)}%` : '0%';
-  }, { passive: true });
-}
+/* ── PROJECT ROW HOVER CURSOR ────────────────────── */
+document.querySelectorAll('.project-row').forEach(row => {
+  row.addEventListener('mouseenter', () => {
+    row.style.cursor = 'pointer';
+  });
+  row.addEventListener('click', () => {
+    const link = row.querySelector('.project-link');
+    if (link) link.click();
+  });
+});
 
 /* ── CONTACT FORM ────────────────────────────────── */
-const form        = document.getElementById('contactForm');
-const submitBtn   = document.getElementById('submitBtn');
+const form       = document.getElementById('contactForm');
+const submitBtn  = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
 if (formSuccess) formSuccess.hidden = true;
 
@@ -86,6 +94,7 @@ if (form) {
     message: { el: document.getElementById('message'), err: document.getElementById('message-error'), msg: 'Please write a message.' },
   };
 
+  // Live validation on blur
   Object.values(fields).forEach(({ el, err, msg }) => {
     if (!el) return;
     el.addEventListener('blur', () => validate(el, err, msg));
@@ -95,26 +104,52 @@ if (form) {
   });
 
   function validate(el, err, msg) {
+    let valid = true;
     const val = el.value.trim();
-    let valid = !!val;
-    if (valid && el.type === 'email') valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+
+    if (!val) {
+      valid = false;
+    } else if (el.type === 'email') {
+      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    }
+
     el.classList.toggle('error', !valid);
-    if (err) err.textContent = valid ? '' : msg;
+    err.textContent = valid ? '' : msg;
     return valid;
   }
 
   function validateAll() {
-    return Object.values(fields).every(({ el, err, msg }) => el ? validate(el, err, msg) : true);
+    return Object.values(fields).every(({ el, err, msg }) =>
+      el ? validate(el, err, msg) : true
+    );
   }
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!validateAll()) return;
+
+    // Simulate async send
     submitBtn.textContent = 'Sending…';
     submitBtn.disabled = true;
+
     await new Promise(r => setTimeout(r, 1200));
+
     form.hidden = true;
     formSuccess.hidden = false;
     formSuccess.focus();
   });
 }
+
+/* ── MARQUEE DUPLICATE CHECK ─────────────────────── */
+// The marquee already has doubled content in HTML for seamless loop.
+// No JS needed — pure CSS animation.
+
+/* ── SMOOTH NAV ACTIVE STATE ─────────────────────── */
+// Highlight active nav link based on current page
+const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-link').forEach(link => {
+  const href = link.getAttribute('href') || '';
+  if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    link.classList.add('nav-link--active');
+  }
+});
